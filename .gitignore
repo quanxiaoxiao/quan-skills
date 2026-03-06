@@ -1,0 +1,28 @@
+# Vim
+*.swp
+*.swo
+*~
+.vim/
+.vimrc.local
+.netrwhist
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# IDE
+.idea/
+.vscode/
+*.code-workspace
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
