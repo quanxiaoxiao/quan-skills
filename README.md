@@ -22,17 +22,15 @@ quan-skills/
 │   ├── prompts/                 # Skill generation prompts
 │   ├── rules/                   # Repository rules
 │   └── checklists/              # Quality checklists
-├── skills/                      # All skills live here
-│   ├── ts-backend-standard/     # TypeScript backend skill
-│   │   └── SKILL.md
-│   ├── zx-script/               # ZX CLI scripting skill
-│   │   └── SKILL.md
-│   └── <skill-name>/            # Future skills follow same pattern
-│       └── SKILL.md
-└── ts-backend-standard/         # Legacy location (being migrated)
-    ├── SKILL.md
-    ├── agents/
-    └── references/
+└── skills/                      # All skills live here
+    ├── ts-backend-standard/     # TypeScript backend skill
+    │   └── SKILL.md
+    ├── hurl-testing/            # Hurl API testing skill
+    │   └── SKILL.md
+    ├── zx-script/               # ZX CLI scripting skill
+    │   └── SKILL.md
+    └── <skill-name>/            # Future skills follow same pattern
+        └── SKILL.md
 ```
 
 Skills live under `skills/` directory. Each skill is independent and contains everything needed to execute that skill.
@@ -154,7 +152,8 @@ When you find yourself repeating the same instructions:
 
 | Skill | Description | Status |
 |-------|-------------|--------|
-| [ts-backend-standard](./ts-backend-standard/SKILL.md) | TypeScript backend with Hono, Zod, strict TS/ESLint | Active |
+| [ts-backend-standard](./skills/ts-backend-standard/SKILL.md) | TypeScript backend with Hono, Zod, strict TS/ESLint | Active |
+| [hurl-testing](./skills/hurl-testing/SKILL.md) | Hurl-based API testing patterns with lifecycle and contract testing | Active |
 | [zx-script](./skills/zx-script/SKILL.md) | CLI automation scripts using zx with minimal dependencies | Active |
 
 ### Future Skill Ideas
@@ -162,7 +161,6 @@ When you find yourself repeating the same instructions:
 - `go-microservice-standard` - Go microservice patterns
 - `react-frontend-patterns` - React component and state management standards
 - `db-migration-workflow` - Database migration best practices
-- `api-testing-hurl` - Hurl-based API testing patterns
 
 ## License
 

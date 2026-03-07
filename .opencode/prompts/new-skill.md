@@ -6,7 +6,7 @@ Create a new Codex skill for the quan-skills repository.
 
 - Repository: `~/.codex/skills/quan-skills`
 - Skills live under `skills/<skill-name>/SKILL.md`
-- Use existing skills as templates (e.g., `ts-backend-standard/SKILL.md`)
+- Use existing skills as templates (e.g., `skills/ts-backend-standard/SKILL.md`)
 
 ## Skill Requirements
 
@@ -38,4 +38,4 @@ Create the skill structure:
 ## References
 
 - README.md for repository conventions
-- ts-backend-standard/SKILL.md for example structure
+- skills/ts-backend-standard/SKILL.md for example structure

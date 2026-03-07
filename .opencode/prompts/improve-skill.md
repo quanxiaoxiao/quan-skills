@@ -4,7 +4,7 @@ Refine and improve an existing Codex skill.
 
 ## Context
 
-- Skill to improve: {skill_path}
+- Skill to improve: skills/{skill_name}/SKILL.md
 - Issue or improvement area: {improvement_area}
 
 ## Analysis

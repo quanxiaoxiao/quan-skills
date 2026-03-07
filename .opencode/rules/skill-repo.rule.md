@@ -12,12 +12,13 @@ quan-skills/
 │   ├── prompts/                 # Skill generation prompts
 │   ├── rules/                   # Repository rules (this file)
 │   └── checklists/              # Quality checklists
-├── ts-backend-standard/         # Skill directory
-│   ├── SKILL.md                 # Main skill definition
-│   ├── agents/                  # Agent configs (optional)
-│   └── references/              # Reference docs (optional)
-└── <skill-name>/                # Other skills follow same pattern
-    └── SKILL.md
+└── skills/                      # All skills live here
+    ├── ts-backend-standard/     # Skill directory
+    │   ├── SKILL.md             # Main skill definition
+    │   ├── agents/              # Agent configs (optional)
+    │   └── references/          # Reference docs (optional)
+    └── <skill-name>/            # Other skills follow same pattern
+        └── SKILL.md
 ```
 
 ## Constraints
