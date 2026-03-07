@@ -74,3 +74,26 @@ Forbidden architecture:
 - inheritance
 - constructor services
 - static utility classes
+
+---
+
+## Backend Architecture Standard
+
+JavaScript and TypeScript backend implementations must follow the functional architecture:
+
+```
+routes → handlers → services → repositories → database
+```
+
+All layers must be implemented with functions.
+
+Object-oriented controller/service patterns must not be used.
+
+Preferred backend stack:
+
+* Hono (routing)
+* Zod (validation)
+* functional services
+* repository-based persistence
+
+This structure ensures predictable AI-generated backend systems.
