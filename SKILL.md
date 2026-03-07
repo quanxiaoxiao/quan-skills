@@ -97,3 +97,20 @@ Preferred backend stack:
 * repository-based persistence
 
 This structure ensures predictable AI-generated backend systems.
+
+---
+
+## Code Complexity Standard
+
+AI-generated code must remain simple and maintainable.
+
+Preferred limits:
+
+* functions ≤ 40 lines
+* files ≤ 300 lines
+* nesting depth ≤ 3
+* parameters ≤ 5
+
+If limits are exceeded the implementation must be refactored.
+
+The goal is predictable, readable code that remains easy to maintain.
