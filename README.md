@@ -25,6 +25,8 @@ quan-skills/
 └── skills/                      # All skills live here
     ├── ts-backend-standard/     # TypeScript backend skill
     │   └── SKILL.md
+    ├── behavior-safe-code-repair/ # Behavior-safe lint/TypeScript repair
+    │   └── SKILL.md
     ├── hurl-testing/            # Hurl API testing skill
     │   └── SKILL.md
     ├── zx-script/               # ZX CLI scripting skill
@@ -153,6 +155,7 @@ When you find yourself repeating the same instructions:
 | Skill | Description | Status |
 |-------|-------------|--------|
 | [ts-backend-standard](./skills/ts-backend-standard/SKILL.md) | TypeScript backend with Hono, Zod, strict TS/ESLint | Active |
+| [behavior-safe-code-repair](./skills/behavior-safe-code-repair/SKILL.md) | Behavior-safe ESLint/TypeScript repair with risk-aware test strategy | Active |
 | [hurl-testing](./skills/hurl-testing/SKILL.md) | Hurl-based API testing patterns with lifecycle and contract testing | Active |
 | [zx-script](./skills/zx-script/SKILL.md) | CLI automation scripts using zx with minimal dependencies | Active |
 
