@@ -47,3 +47,30 @@ Default design should use:
 If an existing project contains classes, do not expand that pattern.
 
 New code should default to functional implementations.
+
+---
+
+## OOP Detection and Prevention
+
+JavaScript and TypeScript code generation must prevent object-oriented architecture by default.
+
+If class-based patterns appear, the system must:
+
+1. detect the violation
+2. reject the design
+3. rewrite it using functional architecture
+
+Preferred architecture:
+
+- functions
+- closures
+- factory functions
+- composition
+- module-based design
+
+Forbidden architecture:
+
+- classes
+- inheritance
+- constructor services
+- static utility classes
