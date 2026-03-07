@@ -78,6 +78,31 @@ Read these files before writing or editing:
 - **Portable**: Avoid OS-specific commands; use zx helpers
 - **Minimal deps**: Only add npm packages when native tools are insufficient
 
+---
+
+- zx scripts must use functions only.
+- Do not generate classes in zx scripts.
+- Use async functions and composition.
+- Organize logic through small functions.
+- Prefer closures when state is required.
+- Avoid static utility classes.
+
+Example pattern:
+
+```javascript
+const fetchData = async () => {
+...
+}
+
+const main = async () => {
+const data = await fetchData()
+}
+
+await main()
+```
+
+---
+
 ## Verification
 
 Always test scripts before considering them complete:

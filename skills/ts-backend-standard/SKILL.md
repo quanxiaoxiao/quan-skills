@@ -67,6 +67,43 @@ Then load only the reference files needed for the task:
 
 ## Implementation Rules
 
+- JavaScript / TypeScript backend code must use functional programming style.
+- Do not generate `class` or `abstract class`.
+- Do not create service classes.
+- Services must be functions or factory functions.
+- Prefer dependency injection via function parameters.
+- Prefer composition over inheritance.
+- Avoid constructor-based architecture.
+
+Example service pattern:
+
+```javascript
+export const createResourceService = (deps) => {
+
+const createResource = async (input) => {
+...
+}
+
+const queryResource = async (input) => {
+...
+}
+
+return {
+createResource,
+queryResource
+}
+
+}
+```
+
+Never generate:
+
+```javascript
+class ResourceService {}
+```
+
+---
+
 - Each endpoint should define a schema object with `body`, `params`, and/or `query` as needed.
 - Validation output should be attached to request context through middleware or an equivalent typed helper.
 - Keep JSON error responses consistent. If the repo already uses machine-readable error codes, preserve them.
