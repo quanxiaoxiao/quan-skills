@@ -16,26 +16,38 @@ Use cases:
 
 ```
 quan-skills/
+├── SKILL.md                     # Repository-level defaults and routing
 ├── README.md                    # This file
 ├── LICENSE                      # MIT license
-├── .opencode/                   # Maintenance tools
-│   ├── prompts/                 # Skill generation prompts
-│   ├── rules/                   # Repository rules
-│   └── checklists/              # Quality checklists
-└── skills/                      # All skills live here
-    ├── ts-backend-standard/     # TypeScript backend skill
-    │   └── SKILL.md
-    ├── behavior-safe-code-repair/ # Behavior-safe lint/TypeScript repair
-    │   └── SKILL.md
-    ├── hurl-testing/            # Hurl API testing skill
-    │   └── SKILL.md
-    ├── zx-script/               # ZX CLI scripting skill
-    │   └── SKILL.md
-    └── <skill-name>/            # Future skills follow same pattern
-        └── SKILL.md
+├── checklists/                  # Shared quick checklists
+├── rules/                       # Shared repo-wide rules
+├── .opencode/                   # Shared prompts, rules, and checklists
+│   ├── prompts/
+│   ├── rules/
+│   └── checklists/
+└── skills/                      # Individual skills
+    ├── ts-backend-standard/
+    │   ├── SKILL.md
+    │   ├── agents/openai.yaml
+    │   └── references/
+    ├── behavior-safe-code-repair/
+    │   ├── SKILL.md
+    │   ├── agents/openai.yaml
+    │   └── references/
+    ├── hurl-testing/
+    │   ├── SKILL.md
+    │   ├── agents/openai.yaml
+    │   └── references/
+    ├── zx-script/
+    │   ├── SKILL.md
+    │   └── agents/openai.yaml
+    └── <skill-name>/
+        ├── SKILL.md
+        ├── agents/openai.yaml
+        └── references/
 ```
 
-Skills live under `skills/` directory. Each skill is independent and contains everything needed to execute that skill.
+Skills live under `skills/`. Keep `SKILL.md` concise and move bulky examples or decision matrices into `references/` so the main skill body stays fast to load.
 
 ## How to Add a New Skill
 
@@ -115,8 +127,11 @@ Optional but recommended:
 - **Implementation Rules** - Specific coding standards or constraints
 - **Output Contract** - Expected response format or deliverables
 - **References** - Links to supporting docs in `references/` folder
+- **agents/openai.yaml** - UI metadata and default prompt for discovery
 
 Keep it practical and executable. The AI should be able to follow the instructions without asking clarifying questions.
+
+Prefer keeping `SKILL.md` under roughly 500 lines. If it grows past that, move detail into `references/` and link only the pieces that should load conditionally.
 
 ## Maintenance Workflow
 

@@ -1,0 +1,7 @@
+interface:
+  display_name: "ZX Script"
+  short_description: "Portable zx CLI scripting patterns"
+  default_prompt: "Use $zx-script to create or refactor a zx-based CLI script with small composable functions, practical error handling, and verification steps that match the repository setup."
+
+policy:
+  allow_implicit_invocation: true

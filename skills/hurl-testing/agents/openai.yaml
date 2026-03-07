@@ -1,0 +1,7 @@
+interface:
+  display_name: "Hurl Testing"
+  short_description: "Generate and repair Hurl API contract tests"
+  default_prompt: "Use $hurl-testing to add or repair Hurl coverage from the API contract, keep tests lifecycle-safe and rerunnable, and verify with the repository's Hurl workflow."
+
+policy:
+  allow_implicit_invocation: true

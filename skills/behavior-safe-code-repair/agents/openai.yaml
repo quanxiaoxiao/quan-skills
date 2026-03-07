@@ -1,0 +1,7 @@
+interface:
+  display_name: "Behavior-Safe Code Repair"
+  short_description: "Repair lint and type regressions without changing behavior"
+  default_prompt: "Use $behavior-safe-code-repair to fix the current ESLint, typecheck, or build failures with the smallest safe diff, choose a test strategy based on behavioral risk, and verify with the repository's own scripts."
+
+policy:
+  allow_implicit_invocation: true

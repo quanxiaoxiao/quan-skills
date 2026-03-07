@@ -1,116 +1,57 @@
-# quan-skills
-
-Global development standards and workflows used across repositories.
-
-This skill set defines rules, prompts, checklists, and workflows for maintaining Node.js projects across macOS and Linux environments.
-
-Primary goals:
-
-- Consistent Node.js runtime practices
-- Minimal and runtime-first dependencies
-- Standardized verification workflows
-- Safe auditing and repair of existing repositories
-- Reusable automation across many projects
-
-Supported platforms:
-
-- macOS
-- Linux
-
-Windows support is intentionally excluded unless explicitly required.
-
-These skills are intended to be loaded globally via:
-
-`~/.codex/skills/quan-skills`
-
-Projects may inherit these rules automatically or extend them locally.
-
+---
+name: quan-skills
+description: Global Node.js and TypeScript skill pack for repositories that should follow functional architecture, runtime-first dependency choices, and explicit verification workflows on macOS or Linux.
 ---
 
-## JavaScript / TypeScript Style Constraint
+# Quan Skills
 
-For JavaScript and TypeScript implementations:
+Use this repository-level skill when a task should inherit the shared defaults that apply across the rest of the pack.
 
-- use functional programming style
-- avoid `class` and `abstract class`
-- avoid inheritance-based architecture
-- prefer functions, closures, and composition
-- prefer factory functions instead of constructor-based services
-- avoid singleton classes
+## Use This Skill
 
-Default design should use:
+Use this skill when the task needs:
 
-- pure functions
-- factory functions
-- module-based organization
+- the shared JavaScript / TypeScript functional-style default
+- the shared Node.js dependency and verification baseline
+- guidance on which `quan-skills` sub-skill to apply next
+- a consistent macOS + Linux scope statement
 
-If an existing project contains classes, do not expand that pattern.
+Do not use this skill as a substitute for the more specific skills under `skills/` when one of them clearly matches the task.
 
-New code should default to functional implementations.
+## Shared Defaults
 
----
+Apply these defaults unless a more specific skill or the user overrides them:
 
-## OOP Detection and Prevention
+- prefer functions, closures, and composition over classes
+- do not expand existing class-based patterns unless a framework requires them
+- keep backend responsibilities separated by layer
+- prefer runtime-first, minimal, pure-JavaScript dependencies
+- preserve existing runtime and package-manager choices unless change is requested
+- verify work with the repository's own scripts instead of ad hoc substitutes
 
-JavaScript and TypeScript code generation must prevent object-oriented architecture by default.
+## Shared Repository Resources
 
-If class-based patterns appear, the system must:
+Use these bundled resources when a task needs them:
 
-1. detect the violation
-2. reject the design
-3. rewrite it using functional architecture
+- `checklists/` for fast global verification reminders
+- `rules/` for durable repo-wide standards
+- `.opencode/prompts/` for reusable maintenance prompts
+- `.opencode/checklists/` for task-specific checklists used by individual skills
+- `.opencode/rules/` for Node.js and Hurl workflow rules shared across skills
 
-Preferred architecture:
+## Skill Routing
 
-- functions
-- closures
-- factory functions
-- composition
-- module-based design
+Choose the narrowest matching skill:
 
-Forbidden architecture:
+- `skills/ts-backend-standard/` for Hono, Zod, TypeScript, and ESLint backend structure
+- `skills/behavior-safe-code-repair/` for lint, typecheck, or build repair with risk-aware test decisions
+- `skills/hurl-testing/` for Hurl contract generation, repair, and regression coverage
+- `skills/zx-script/` for zx-based CLI automation
 
-- classes
-- inheritance
-- constructor services
-- static utility classes
+## Output Contract
 
----
+When this repository-level skill is used directly, respond with:
 
-## Backend Architecture Standard
-
-JavaScript and TypeScript backend implementations must follow the functional architecture:
-
-```
-routes → handlers → services → repositories → database
-```
-
-All layers must be implemented with functions.
-
-Object-oriented controller/service patterns must not be used.
-
-Preferred backend stack:
-
-* Hono (routing)
-* Zod (validation)
-* functional services
-* repository-based persistence
-
-This structure ensures predictable AI-generated backend systems.
-
----
-
-## Code Complexity Standard
-
-AI-generated code must remain simple and maintainable.
-
-Preferred limits:
-
-* functions ≤ 40 lines
-* files ≤ 300 lines
-* nesting depth ≤ 3
-* parameters ≤ 5
-
-If limits are exceeded the implementation must be refactored.
-
-The goal is predictable, readable code that remains easy to maintain.
+1. the shared defaults you are applying
+2. the sub-skill you are routing to, if any
+3. the verification approach you will use
