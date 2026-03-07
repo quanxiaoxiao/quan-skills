@@ -22,6 +22,44 @@ This framework is intended to support:
 
 ---
 
+## Use This Skill
+
+Use this skill when:
+
+- Generating Hurl tests from an OpenAPI specification
+- Writing new Hurl tests for HTTP API endpoints
+- Repairing failing Hurl tests after API changes
+- Adding regression tests for API bug fixes
+- Refactoring Hurl tests for better maintainability
+- Reviewing Hurl test coverage for completeness
+
+---
+
+## When NOT to use
+
+Do NOT use this skill when:
+
+- The task involves internal implementation testing (unit tests, database tests)
+- Testing non-HTTP protocols (gRPC, WebSocket, GraphQL subscriptions)
+- The API has no documented contract or OpenAPI spec
+- The testing requires complex UI interactions or browser automation
+- Load testing or performance benchmarking is the primary goal
+- The project does not use Hurl (use the appropriate testing framework instead)
+
+---
+
+## Pre-Read Order
+
+Before generating or repairing Hurl tests, read these sources in order:
+
+1. `openapi.json` or `openapi.yaml` - The API contract specification
+2. Existing Hurl tests in `tests/hurl/` directory
+3. API documentation or README for business rules
+4. `.opencode/rules/hurl-testing.rule.md` - Repository Hurl testing rules
+5. `.opencode/checklists/hurl-quality.checklist.md` - Quality verification checklist
+
+---
+
 # 1. Core Principles
 
 ## 1.1 External Behavior Contracts Only

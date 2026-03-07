@@ -37,6 +37,31 @@ This skill does **not** assume that every failure should be fixed the same way.
 
 ---
 
+## When NOT to use
+
+Do NOT use this skill when:
+
+- The task is purely about code formatting or style (use lint --fix instead)
+- The goal is to add new features or change business requirements
+- The repository has no existing test infrastructure and tests cannot be added
+- The failure is in generated code that should be fixed at the generator level
+- The repair requires significant architectural changes (escalate to refactoring)
+- The timeline does not allow for proper risk assessment and testing
+
+---
+
+## Pre-Read Order
+
+Before repairing lint or build failures, read these sources:
+
+1. `.opencode/prompts/lint-build-repair.md` - Repair workflow guidance
+2. `.opencode/checklists/lint-build-repair-checklist.md` - Quality verification checklist
+3. `README.md` and `package.json` - Project context and available scripts
+4. Existing tests related to the failing code
+5. `.opencode/rules/` - Any repository-specific rules
+
+---
+
 ## Core Principles
 
 ### 1. External correctness matters more than internal neatness
