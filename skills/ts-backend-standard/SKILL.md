@@ -71,6 +71,8 @@ Then load only the reference files needed for the task:
 - Do not generate `class` or `abstract class`.
 - Do not create service classes.
 - Services must be functions or factory functions.
+- To support unit testing, prefer splitting business logic into small functions with single responsibilities.
+- Service-level validation, mapping, branching, and derived-value logic should be extracted into directly testable helpers or pure functions where practical.
 - Prefer dependency injection via function parameters.
 - Prefer composition over inheritance.
 - Avoid constructor-based architecture.

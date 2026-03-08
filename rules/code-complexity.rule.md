@@ -4,6 +4,8 @@ All generated JavaScript and TypeScript code must follow strict complexity limit
 
 The goal is to keep code readable and maintainable.
 
+For JavaScript and TypeScript, these limits also exist to keep business logic easy to unit test.
+
 ---
 
 ## Function Size
@@ -19,6 +21,7 @@ If a function grows beyond this size:
 
 - extract helper functions
 - move logic to services or utilities
+- split decision logic from side effects when possible
 
 Bad example:
 
@@ -111,6 +114,8 @@ Bad:
 
 Functions should do one thing.
 
+For JavaScript and TypeScript, prefer boundaries that let one function cover one decision, transformation, or validation step so it can be tested directly.
+
 Bad:
 
 ```javascript
@@ -123,6 +128,15 @@ Good:
 createUser()
 sendWelcomeEmail()
 logUserCreated()
+```
+
+Better orchestration shape:
+
+```javascript
+const normalizedInput = normalizeInput(input)
+const validation = validateInput(normalizedInput)
+const decision = decideAction(validation)
+return executeAction(decision)
 ```
 
 ---
@@ -159,6 +173,12 @@ If the same pattern appears twice:
 
 - create a helper function
 
+If a function mixes heavy branching with side effects:
+
+- extract pure helpers first
+- keep orchestration thin
+- prefer smaller functions over larger mocks in tests
+
 ---
 
 ## Output Verification
@@ -169,3 +189,5 @@ Before finishing code generation verify:
 - files remain modular
 - nesting depth ≤ 3
 - functions have clear responsibilities
+- business logic is split into unit-testable helpers where practical
+- side-effect boundaries are separated from pure logic when practical

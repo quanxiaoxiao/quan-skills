@@ -11,5 +11,8 @@ Before completing a task, verify:
 - [ ] utilities implemented as plain functions
 - [ ] dependency injection uses function parameters
 - [ ] architecture uses composition
+- [ ] business logic is split into small functions with single responsibilities
+- [ ] framework context or external dependencies are not pushed through large branching logic
+- [ ] orchestration functions mainly coordinate smaller testable helpers
 
 If any violation exists, rewrite the implementation.

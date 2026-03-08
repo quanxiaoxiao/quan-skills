@@ -17,6 +17,8 @@ Allowed structures:
 - composition
 - functional helpers
 
+Functional style here also means preferring function boundaries that are easy to unit test.
+
 ## Forbidden
 
 Never generate:
@@ -50,6 +52,29 @@ Use composition.
 ### Instead of static helpers
 
 Export functions.
+
+---
+
+## Testable Function Boundary Rule
+
+JavaScript and TypeScript code should be split into small functions that are easy to unit test.
+
+Prefer:
+
+- single-purpose functions
+- explicit input and output
+- pure helpers for branching, mapping, validation, and derived values
+- composition where orchestration functions coordinate already-testable helpers
+- dependency injection through function parameters
+
+Avoid:
+
+- one function mixing parsing, decision logic, side effects, and formatting
+- business branching that depends on hidden mutable state
+- pushing framework context, database handles, or logging objects through large decision trees
+- keeping logic coupled just to avoid creating helper functions
+
+If a logic block cannot be tested directly without large mocks, first split the function boundary before expanding the test harness.
 
 ---
 
@@ -95,6 +120,7 @@ Prefer:
 - explicit return values
 - immutable updates
 - closure-based encapsulation
+- testable function boundaries around business logic
 
 Avoid hidden mutable state tied to instances.
 
@@ -149,5 +175,7 @@ Before finalizing JavaScript or TypeScript output, verify:
 - no `abstract class` exists
 - no inheritance pattern exists
 - no constructor-based services exist
+- business logic is split into small functions that can be unit tested directly
+- orchestration functions mainly coordinate helpers instead of hiding all logic internally
 
 All implementations must be function-based.

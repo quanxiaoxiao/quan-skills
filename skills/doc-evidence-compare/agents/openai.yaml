@@ -1,0 +1,7 @@
+interface:
+  display_name: "Doc Evidence Compare"
+  short_description: "Compare docs and code with file-backed evidence"
+  default_prompt: "Use $doc-evidence-compare to search this repository for a business rule or relationship, compare documentation and code evidence, and return a structured evidence matrix with gaps and confidence."
+
+policy:
+  allow_implicit_invocation: true

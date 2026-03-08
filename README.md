@@ -38,6 +38,10 @@ quan-skills/
     │   ├── SKILL.md
     │   ├── agents/openai.yaml
     │   └── references/
+    ├── doc-evidence-compare/
+    │   ├── SKILL.md
+    │   ├── agents/openai.yaml
+    │   └── references/
     ├── zx-script/
     │   ├── SKILL.md
     │   └── agents/openai.yaml
@@ -133,6 +137,8 @@ Keep it practical and executable. The AI should be able to follow the instructio
 
 Prefer keeping `SKILL.md` under roughly 500 lines. If it grows past that, move detail into `references/` and link only the pieces that should load conditionally.
 
+For JavaScript and TypeScript work, the pack default is not only functional programming style but also splitting logic along unit-testable boundaries. The primary source of that guidance lives in `rules/` and `checklists/`, with skill-level wording kept aligned but shorter.
+
 ## Maintenance Workflow
 
 ### Regular Updates
@@ -172,6 +178,7 @@ When you find yourself repeating the same instructions:
 | [ts-backend-standard](./skills/ts-backend-standard/SKILL.md) | TypeScript backend with Hono, Zod, strict TS/ESLint | Active |
 | [behavior-safe-code-repair](./skills/behavior-safe-code-repair/SKILL.md) | Behavior-safe ESLint/TypeScript repair with risk-aware test strategy | Active |
 | [hurl-testing](./skills/hurl-testing/SKILL.md) | Hurl-based API testing patterns with lifecycle and contract testing | Active |
+| [doc-evidence-compare](./skills/doc-evidence-compare/SKILL.md) | Compare docs and code evidence, locate business-rule coverage, and identify mismatches | Active |
 | [zx-script](./skills/zx-script/SKILL.md) | CLI automation scripts using zx with minimal dependencies | Active |
 
 ### Future Skill Ideas
