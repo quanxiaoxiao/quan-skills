@@ -180,6 +180,7 @@ When you find yourself repeating the same instructions:
 | [hurl-testing](./skills/hurl-testing/SKILL.md) | Hurl-based API testing patterns with lifecycle and contract testing | Active |
 | [doc-evidence-compare](./skills/doc-evidence-compare/SKILL.md) | Compare docs and code evidence, locate business-rule coverage, and identify mismatches | Active |
 | [zx-script](./skills/zx-script/SKILL.md) | CLI automation scripts using zx with minimal dependencies | Active |
+| [auto-proxy-detect](./skills/auto-proxy-detect/SKILL.md) | Auto-detect and configure HTTP proxy on port 7890 for network operations | Active |
 
 ### Future Skill Ideas
 
