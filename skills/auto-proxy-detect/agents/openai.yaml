@@ -1,7 +1,7 @@
 interface:
   display_name: "Auto Proxy Detect"
-  short_description: "Detect and configure proxy on port 7890"
-  default_prompt: "Use $auto-proxy-detect to check for a proxy on port 7890 and configure it automatically for network operations (docker pull, apt install, npm install, etc.) before running any network commands."
+  short_description: "Diagnose proxy health, target reachability, and choose the safest network execution path"
+  default_prompt: "Use $auto-proxy-detect to detect whether a local proxy is listening on port 7890, validate whether it works as an HTTP/HTTPS proxy, probe the target resource when known, and recommend the best execution mode before running network commands."
 
 policy:
   allow_implicit_invocation: true
