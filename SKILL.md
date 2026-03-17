@@ -47,6 +47,7 @@ Choose the narrowest matching skill:
 - `skills/behavior-safe-code-repair/` for lint, typecheck, or build repair with risk-aware test decisions
 - `skills/hurl-testing/` for Hurl contract generation, repair, and regression coverage
 - `skills/doc-evidence-compare/` for repo-wide documentation versus code evidence gathering, mismatch checks, and coverage audits
+- `skills/doc-governance-init/` for bootstrapping or refactoring repository documentation into a layered governance structure
 - `skills/zx-script/` for zx-based CLI automation
 
 ## Output Contract
