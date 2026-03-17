@@ -33,11 +33,10 @@ Coding principles and conventions are defined in [AGENTS.md](AGENTS.md). Apply t
 
 Use these bundled resources when a task needs them:
 
-- `checklists/` for fast global verification reminders
-- `rules/` for durable repo-wide standards
-- `.opencode/prompts/` for reusable maintenance prompts
-- `.opencode/checklists/` for task-specific checklists used by individual skills
-- `.opencode/rules/` for Node.js and Hurl workflow rules shared across skills
+- `rules/` for durable repo-wide standards (coding + Node.js + Hurl)
+- `checklists/` for verification checklists
+- `prompts/` for reusable maintenance prompts
+- `docs/workflows/` for Node.js audit, fix, and modernization workflows
 
 ## Skill Routing
 

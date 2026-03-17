@@ -37,8 +37,8 @@ Read the target repository first:
 
 Then load bundled guidance from this skill pack:
 
-5. `../../.opencode/prompts/lint-build-repair.md`
-6. `../../.opencode/checklists/lint-build-repair-checklist.md`
+5. `../../prompts/lint-build-repair.md`
+6. `../../checklists/lint-build-repair-checklist.md`
 7. `references/risk-and-test-matrix.md`
 
 ## Workflow
@@ -66,7 +66,7 @@ Then load bundled guidance from this skill pack:
 Load these only when needed:
 
 - `references/risk-and-test-matrix.md` for risk levels, test policies, heuristics, and stop conditions
-- `../../.opencode/prompts/lint-build-repair-with-tests.md` when the task explicitly includes test authoring
+- `../../prompts/lint-build-repair-with-tests.md` when the task explicitly includes test authoring
 
 ## Verification
 

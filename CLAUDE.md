@@ -18,5 +18,5 @@ For how to create, name, and maintain skills, see [docs/skill-authoring.md](docs
 
 - This file (`CLAUDE.md`) is auto-loaded by Claude Code at conversation start.
 - `SKILL.md` is the Codex CLI entry point — do not merge its content here.
-- `.opencode/` is the OpenCode tool config — do not modify without user request.
+- Shared rules, prompts, checklists live at root level — see `AGENTS.md` for structure.
 - When routing to a skill, check `SKILL.md` for the routing table or `AGENTS.md` for the full skill list.

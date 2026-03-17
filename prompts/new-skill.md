@@ -5,7 +5,7 @@ Create a new Codex skill for the quan-skills repository.
 ## Authoritative Source
 
 Full authoring guide, template, naming conventions, and maintenance workflow:
-[docs/skill-authoring.md](../../docs/skill-authoring.md)
+[docs/skill-authoring.md](../docs/skill-authoring.md)
 
 ## Context
 

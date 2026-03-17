@@ -1,6 +1,6 @@
 # AGENTS.md
 
-Shared rules for all coding agents working in this repository. Tool-specific instructions belong in `CLAUDE.md`, `SKILL.md`, or `.opencode/`.
+Shared rules for all coding agents working in this repository. Tool-specific instructions belong in `CLAUDE.md` (Claude Code) or `SKILL.md` (Codex CLI).
 
 ## Active Skills
 
@@ -52,10 +52,12 @@ quan-skills/
 ├── AGENTS.md              # This file — shared agent rules
 ├── CLAUDE.md              # Claude Code specific guidance
 ├── SKILL.md               # Codex entry point and skill routing
-├── docs/                  # System knowledge (authoring guides)
-├── rules/                 # Durable coding rules
+├── docs/                  # System knowledge (authoring guides, workflows)
+│   ├── skill-authoring.md
+│   └── workflows/
+├── rules/                 # Durable coding and Node.js rules
 ├── checklists/            # Verification checklists
-├── .opencode/             # OpenCode prompts, rules, checklists, workflows
+├── prompts/               # Reusable maintenance prompts
 └── skills/                # Individual skill definitions
     └── <name>/
         ├── SKILL.md

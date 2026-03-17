@@ -4,9 +4,9 @@ Applies to: `~/.codex/skills/quan-skills/`
 
 ## Authoritative Sources
 
-- **Skill authoring guide**: [docs/skill-authoring.md](../../docs/skill-authoring.md) — templates, naming, anatomy, maintenance
-- **Shared agent rules**: [AGENTS.md](../../AGENTS.md) — coding principles, conventions, active skill list
-- **Repository structure**: [AGENTS.md § Repository Structure](../../AGENTS.md#repository-structure)
+- **Skill authoring guide**: [docs/skill-authoring.md](../docs/skill-authoring.md) — templates, naming, anatomy, maintenance
+- **Shared agent rules**: [AGENTS.md](../AGENTS.md) — coding principles, conventions, active skill list
+- **Repository structure**: [AGENTS.md § Repository Structure](../AGENTS.md#repository-structure)
 
 ## Quick Constraints (for OpenCode context)
 

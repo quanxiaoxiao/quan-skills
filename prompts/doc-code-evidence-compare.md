@@ -5,7 +5,7 @@ Apply the `doc-evidence-compare` skill to compare repository documentation and c
 ## Authoritative Source
 
 Full workflow, search order, and output format defined in:
-[skills/doc-evidence-compare/SKILL.md](../../skills/doc-evidence-compare/SKILL.md)
+[skills/doc-evidence-compare/SKILL.md](../skills/doc-evidence-compare/SKILL.md)
 
 ## Context
 

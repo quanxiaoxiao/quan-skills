@@ -36,8 +36,8 @@ Read the target repository first:
 
 Then load bundled guidance from this skill pack:
 
-4. `../../.opencode/rules/hurl-testing.rule.md`
-5. `../../.opencode/checklists/hurl-quality.checklist.md`
+4. `../../rules/hurl-testing.rule.md`
+5. `../../checklists/hurl-quality.checklist.md`
 6. `references/test-structure.md`
 7. `references/generation-and-repair.md`
 

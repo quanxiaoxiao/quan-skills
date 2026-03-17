@@ -1,6 +1,6 @@
 # Skill Quality Checklist
 
-Use before committing a new or updated skill. Full authoring guide: [docs/skill-authoring.md](../../docs/skill-authoring.md)
+Use before committing a new or updated skill. Full authoring guide: [docs/skill-authoring.md](../docs/skill-authoring.md)
 
 ## Structure
 

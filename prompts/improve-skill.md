@@ -5,7 +5,7 @@ Refine and improve an existing Codex skill.
 ## Authoritative Source
 
 Skill anatomy and quality expectations:
-[docs/skill-authoring.md](../../docs/skill-authoring.md)
+[docs/skill-authoring.md](../docs/skill-authoring.md)
 
 ## Context
 
