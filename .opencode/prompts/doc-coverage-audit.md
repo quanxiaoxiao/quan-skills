@@ -1,6 +1,11 @@
 # Prompt: Doc Coverage Audit
 
-Use `$doc-evidence-compare` to audit whether documentation sufficiently covers implemented behavior for a topic.
+Apply the `doc-evidence-compare` skill in audit mode to check documentation coverage for a topic.
+
+## Authoritative Source
+
+Full workflow, search order, and output format defined in:
+[skills/doc-evidence-compare/SKILL.md](../../skills/doc-evidence-compare/SKILL.md)
 
 ## Context
 
@@ -9,42 +14,17 @@ Use `$doc-evidence-compare` to audit whether documentation sufficiently covers i
 - Code roots: `{code_roots}`
 - Coverage standard: `{coverage_standard}`
 
-## Objective
+## Quick Reference
 
-Inspect the repository and determine:
-
-- which parts of the topic are documented
-- which parts are only implemented in code
-- whether docs and implementation disagree
-- where documentation coverage is missing or drifting
-
-## Required Workflow
-
-1. Apply `$doc-evidence-compare`.
-2. Read repo context before searching.
-3. Expand the topic into aliases and implementation-oriented terms.
-4. Search the provided doc roots first, then the provided code roots.
-5. If roots are empty or not provided, fall back to whole-repo `docs + code`.
-6. Build the evidence matrix before making recommendations.
-
-## Output Format
-
-Return:
-
-1. a short coverage summary
-2. the evidence matrix with columns:
-   - `Claim / 问题点`
-   - `Doc Evidence`
-   - `Code Evidence`
-   - `Status`
-   - `Gap / Notes`
-   - `Confidence`
-3. a short gap list
-4. a short recommendation block for what documentation should be added, corrected, or split
+1. Read repo context before searching
+2. Expand topic into aliases and implementation-oriented terms
+3. Search doc roots first, then code roots (fall back to whole repo if not specified)
+4. Build evidence matrix before making recommendations
+5. Output: Coverage Summary → Evidence Matrix → Gap List → Recommendations
 
 ## Rules
 
-- every positive finding must include file references
-- use `not_found` only after searching both sides with aliases
-- distinguish `documented_only` from `implemented_only`
-- call out documentation drift explicitly when docs and code disagree
+- Every positive finding must include file references
+- Use `not_found` only after searching both sides with aliases
+- Distinguish `documented_only` from `implemented_only`
+- Call out documentation drift explicitly when docs and code disagree

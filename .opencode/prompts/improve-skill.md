@@ -2,39 +2,26 @@
 
 Refine and improve an existing Codex skill.
 
+## Authoritative Source
+
+Skill anatomy and quality expectations:
+[docs/skill-authoring.md](../../docs/skill-authoring.md)
+
 ## Context
 
-- Skill to improve: skills/{skill_name}/SKILL.md
-- Issue or improvement area: {improvement_area}
+- Skill to improve: `skills/{skill_name}/SKILL.md`
+- Issue or improvement area: `{improvement_area}`
 
-## Analysis
+## Steps
 
 1. Read the current SKILL.md
-2. Identify problems:
-   - Unclear triggers (when to use the skill)
-   - Missing steps in workflow
-   - Vague instructions
-   - Overly complex or ambiguous
-   - Missing verification steps
-
-3. Check if references/ docs need updates
-
-## Improvements to Make
-
-Apply these fixes:
-
-1. **Clarify triggers**: Make "Use This Skill" section specific
-2. **Fix workflow**: Ensure steps are actionable and ordered correctly
-3. **Add constraints**: Include "Do not..." statements to prevent scope creep
-4. **Verify completeness**: Check Pre-Read Order and Verification sections
-5. **Remove fluff**: Delete generic advice, keep concrete instructions
-
-## Output
-
-Update SKILL.md with:
-- Clearer description
-- Better structured workflow
-- Specific examples
-- Improved maintainability
-
-Commit message format: `skill({skill_name}): {brief_description_of_changes}`
+2. Read `docs/skill-authoring.md` for required anatomy
+3. Identify problems: unclear triggers, missing workflow steps, vague instructions, missing verification
+4. Check if `references/` docs need updates
+5. Apply fixes:
+   - Clarify "Use This Skill" triggers
+   - Ensure workflow steps are actionable and ordered
+   - Add "Do not..." constraints to prevent scope creep
+   - Verify Pre-Read Order and Verification sections
+   - Remove fluff — keep concrete instructions only
+6. Commit: `skill({skill_name}): {brief_description}`

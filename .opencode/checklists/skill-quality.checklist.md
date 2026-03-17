@@ -1,56 +1,35 @@
 # Skill Quality Checklist
 
-Use this checklist before committing a new or updated skill.
+Use before committing a new or updated skill. Full authoring guide: [docs/skill-authoring.md](../../docs/skill-authoring.md)
+
+## Structure
+
+- [ ] SKILL.md has YAML frontmatter (`name`, `description`)
+- [ ] Has required sections: Use This Skill, Pre-Read Order, Workflow, Verification
+- [ ] Directory follows kebab-case naming with tech or action prefix
+- [ ] Under ~500 lines (detail moved to `references/`)
 
 ## Clarity
 
-- [ ] Skill name is descriptive (kebab-case)
-- [ ] Description explains when to use the skill in one sentence
-- [ ] "Use This Skill" section lists specific scenarios
-- [ ] "When NOT to use" is clear to prevent scope creep
-- [ ] No ambiguous language (avoid "usually", "often", "might")
-
-## Trigger Quality
-
-- [ ] Description is specific enough to trigger correctly
+- [ ] Description triggers correctly in one sentence
+- [ ] "Use This Skill" lists specific scenarios
+- [ ] "When NOT to use" prevents scope creep
 - [ ] Triggers don't overlap with other skills
-- [ ] Examples are concrete, not generic
-- [ ] Covers both positive triggers (use when...) and negative (don't use when...)
+- [ ] No ambiguous language ("usually", "often", "might")
 
 ## Workflow
 
-- [ ] Steps are numbered and ordered correctly
-- [ ] Each step is actionable (starts with verb)
+- [ ] Steps numbered, ordered, each starts with a verb
 - [ ] Pre-Read Order lists files in priority sequence
-- [ ] Dependencies between steps are clear
 - [ ] No missing steps for common scenarios
 
 ## Verification
 
 - [ ] Verification steps are specific and testable
-- [ ] Includes commands to run (e.g., `npm run typecheck`)
-- [ ] Describes expected outcomes
-- [ ] Mentions what to do if verification fails
+- [ ] Describes expected outcomes and failure handling
 
-## Maintainability
+## Governance
 
-- [ ] Skill is focused on one responsibility
 - [ ] No duplicated content from other skills
-- [ ] References/ folder used for lengthy docs
-- [ ] Can be understood without domain expertise
-- [ ] Easy to update without breaking existing behavior
-
-## Final Check
-
-- [ ] SKILL.md follows frontmatter format
-- [ ] Directory structure follows conventions
-- [ ] README.md skill list is updated (if new skill)
-- [ ] Commit message follows convention: `skill(name): description`
-
-## Common Issues to Fix
-
-1. **Too generic**: Add specific tech stack or context
-2. **Missing negatives**: Add "When NOT to use" section
-3. **Vague steps**: Replace with concrete commands or actions
-4. **Missing verification**: Add clear success criteria
-5. **Scope creep**: Split into multiple skills if doing too much
+- [ ] `AGENTS.md` active skill table updated (if new skill)
+- [ ] Commit message: `skill(name): description`

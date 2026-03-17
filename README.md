@@ -4,7 +4,7 @@ Personal Codex skills repository stored at `~/.codex/skills/quan-skills`.
 
 ## What This Repository Is For
 
-This repo stores reusable skill modules that teach AI assistants how to work with my specific tech stacks, coding standards, and workflows. Each skill is a self-contained instruction set for consistent, high-quality assistance across projects.
+Reusable skill modules that teach AI assistants how to work with specific tech stacks, coding standards, and workflows. Each skill is a self-contained instruction set for consistent, high-quality assistance across projects.
 
 Use cases:
 - Standardize how AI handles TypeScript backend work
@@ -12,181 +12,31 @@ Use cases:
 - Avoid repeating setup instructions for common tasks
 - Keep institutional knowledge versioned and portable
 
-## Directory Structure
+## Documentation
 
-```
-quan-skills/
-├── SKILL.md                     # Repository-level defaults and routing
-├── README.md                    # This file
-├── LICENSE                      # MIT license
-├── checklists/                  # Shared quick checklists
-├── rules/                       # Shared repo-wide rules
-├── .opencode/                   # Shared prompts, rules, and checklists
-│   ├── prompts/
-│   ├── rules/
-│   └── checklists/
-└── skills/                      # Individual skills
-    ├── ts-backend-standard/
-    │   ├── SKILL.md
-    │   ├── agents/openai.yaml
-    │   └── references/
-    ├── behavior-safe-code-repair/
-    │   ├── SKILL.md
-    │   ├── agents/openai.yaml
-    │   └── references/
-    ├── hurl-testing/
-    │   ├── SKILL.md
-    │   ├── agents/openai.yaml
-    │   └── references/
-    ├── doc-evidence-compare/
-    │   ├── SKILL.md
-    │   ├── agents/openai.yaml
-    │   └── references/
-    ├── zx-script/
-    │   ├── SKILL.md
-    │   └── agents/openai.yaml
-    └── <skill-name>/
-        ├── SKILL.md
-        ├── agents/openai.yaml
-        └── references/
+- [AGENTS.md](AGENTS.md) — shared rules for all coding agents, active skill list
+- [Skill Authoring Guide](docs/skill-authoring.md) — how to create, name, and maintain skills
+- [CLAUDE.md](CLAUDE.md) — Claude Code specific guidance
+- [SKILL.md](SKILL.md) — Codex entry point and skill routing
+
+## Active Skills
+
+See [AGENTS.md](AGENTS.md#active-skills) for the current skill list.
+
+## Quick Start
+
+```bash
+# Skills are auto-loaded by Codex CLI from ~/.codex/skills/
+# To add a new skill:
+mkdir skills/<skill-name>
+# Then follow docs/skill-authoring.md
 ```
 
-Skills live under `skills/`. Keep `SKILL.md` concise and move bulky examples or decision matrices into `references/` so the main skill body stays fast to load.
+## Future Skill Ideas
 
-## How to Add a New Skill
-
-1. Create a new directory: `mkdir skills/<skill-name>`
-2. Add `SKILL.md` with the skill definition (see template below)
-3. Add any supporting files in subdirectories (`references/`, `agents/`, etc.)
-4. Update the Example Skill List section in this README
-5. Commit with a descriptive message
-
-### Quick Template for SKILL.md
-
-```markdown
----
-name: skill-name
-description: One-line description of what this skill does and when to use it.
----
-
-# Skill Title
-
-Brief overview of the skill's purpose.
-
-## Use This Skill
-
-When to use this skill:
-- Specific scenario 1
-- Specific scenario 2
-
-When NOT to use this skill:
-- Out-of-scope scenario
-
-## Pre-Read Order
-
-Files to read before starting:
-1. `README.md`
-2. `package.json`
-3. etc.
-
-## Workflow
-
-1. Step one
-2. Step two
-3. Step three
-
-## Verification
-
-How to verify the work:
-1. `npm run typecheck`
-2. `npm run test`
-```
-
-## Skill Naming Conventions
-
-- Use lowercase with hyphens: `ts-backend-standard`, `react-frontend-patterns`
-- Be descriptive but concise
-- Use technology prefix for stack-specific skills: `ts-`, `py-`, `go-`
-- Use action prefix for workflow skills: `deploy-`, `test-`, `refactor-`
-- Avoid generic names like `utils` or `helpers`
-
-Good examples:
-- `ts-backend-standard`
-- `py-data-pipeline`
-- `deploy-aws-lambda`
-- `refactor-legacy-react`
-
-## What a Good SKILL.md Should Contain
-
-Required sections:
-
-1. **Frontmatter** - YAML metadata with `name` and `description`
-2. **Use This Skill** - Clear when-to-use and when-not-to-use guidance
-3. **Pre-Read Order** - What files to read before starting work
-4. **Workflow** - Step-by-step process for the AI to follow
-5. **Verification** - How to verify the work is correct
-
-Optional but recommended:
-
-- **Implementation Rules** - Specific coding standards or constraints
-- **Output Contract** - Expected response format or deliverables
-- **References** - Links to supporting docs in `references/` folder
-- **agents/openai.yaml** - UI metadata and default prompt for discovery
-
-Keep it practical and executable. The AI should be able to follow the instructions without asking clarifying questions.
-
-Prefer keeping `SKILL.md` under roughly 500 lines. If it grows past that, move detail into `references/` and link only the pieces that should load conditionally.
-
-For JavaScript and TypeScript work, the pack default is not only functional programming style but also splitting logic along unit-testable boundaries. The primary source of that guidance lives in `rules/` and `checklists/`, with skill-level wording kept aligned but shorter.
-
-## Maintenance Workflow
-
-### Regular Updates
-
-When you notice the AI making mistakes or missing context:
-
-1. Identify which skill needs updating
-2. Edit the `SKILL.md` with clearer instructions
-3. Test the updated skill on a real task
-4. Commit: `git commit -m "skill(ts-backend): clarify error handling rules"`
-
-### Adding New Skills
-
-When you find yourself repeating the same instructions:
-
-1. Extract the pattern into a new skill
-2. Follow the directory structure above
-3. Reference existing skills as templates
-4. Keep the first version minimal, expand based on usage
-
-### Version Control
-
-- One commit per skill change
-- Use conventional commits: `skill(name): description`
-- Tag major skill versions if needed: `git tag ts-backend-v2`
-
-### Cleanup
-
-- Remove skills that are no longer used
-- Archive outdated skills rather than deleting (move to `archive/`)
-- Review skills every few months for relevance
-
-## Example Skill List
-
-| Skill | Description | Status |
-|-------|-------------|--------|
-| [ts-backend-standard](./skills/ts-backend-standard/SKILL.md) | TypeScript backend with Hono, Zod, strict TS/ESLint | Active |
-| [behavior-safe-code-repair](./skills/behavior-safe-code-repair/SKILL.md) | Behavior-safe ESLint/TypeScript repair with risk-aware test strategy | Active |
-| [hurl-testing](./skills/hurl-testing/SKILL.md) | Hurl-based API testing patterns with lifecycle and contract testing | Active |
-| [doc-evidence-compare](./skills/doc-evidence-compare/SKILL.md) | Compare docs and code evidence, locate business-rule coverage, and identify mismatches | Active |
-| [zx-script](./skills/zx-script/SKILL.md) | CLI automation scripts using zx with minimal dependencies | Active |
-| [auto-proxy-detect](./skills/auto-proxy-detect/SKILL.md) | Auto-detect and configure HTTP proxy on port 7890 for network operations | Active |
-
-### Future Skill Ideas
-
-- `go-microservice-standard` - Go microservice patterns
-- `react-frontend-patterns` - React component and state management standards
-- `db-migration-workflow` - Database migration best practices
+- `go-microservice-standard` — Go microservice patterns
+- `react-frontend-patterns` — React component and state management standards
+- `db-migration-workflow` — Database migration best practices
 
 ## License
 

@@ -2,40 +2,29 @@
 
 Create a new Codex skill for the quan-skills repository.
 
+## Authoritative Source
+
+Full authoring guide, template, naming conventions, and maintenance workflow:
+[docs/skill-authoring.md](../../docs/skill-authoring.md)
+
 ## Context
 
-- Repository: `~/.codex/skills/quan-skills`
-- Skills live under `skills/<skill-name>/SKILL.md`
-- Use existing skills as templates (e.g., `skills/ts-backend-standard/SKILL.md`)
+- Skill name: `{skill_name}`
+- Purpose: `{skill_purpose}`
+- Tech stack / domain: `{tech_stack}`
 
-## Skill Requirements
+## Steps
 
-Skill name: {skill_name}
-Purpose: {skill_purpose}
-Tech stack / domain: {tech_stack}
-
-## Output
-
-Create the skill structure:
-
-1. Directory: `skills/{skill_name}/`
-2. File: `SKILL.md` with:
-   - YAML frontmatter (name, description)
-   - "Use This Skill" section (when to use / when not to use)
-   - "Pre-Read Order" section (files to check first)
-   - "Workflow" section (step-by-step actions)
-   - "Verification" section (how to validate work)
-   - Optional: references/ folder for supporting docs
+1. Read `docs/skill-authoring.md` for the template and conventions
+2. Create directory: `skills/{skill_name}/`
+3. Create `SKILL.md` using the template (frontmatter + required sections)
+4. Add `references/` folder if supporting docs are needed
+5. Update `AGENTS.md` active skill table
+6. Commit: `skill({skill_name}): add {brief_description}`
 
 ## Constraints
 
-- Keep it minimal and actionable
-- Follow existing naming conventions (kebab-case)
+- Keep it minimal and actionable — start simple, expand later
+- Follow kebab-case naming with tech or action prefix
 - Make triggers clear and specific
-- Include concrete examples where helpful
-- Avoid over-engineering - start simple, expand later
-
-## References
-
-- README.md for repository conventions
-- skills/ts-backend-standard/SKILL.md for example structure
+- One skill = one responsibility

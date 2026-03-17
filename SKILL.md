@@ -20,7 +20,7 @@ Do not use this skill as a substitute for the more specific skills under `skills
 
 ## Shared Defaults
 
-Apply these defaults unless a more specific skill or the user overrides them:
+Coding principles and conventions are defined in [AGENTS.md](AGENTS.md). Apply these defaults unless a more specific skill or the user overrides them:
 
 - prefer functions, closures, and composition over classes
 - do not expand existing class-based patterns unless a framework requires them
