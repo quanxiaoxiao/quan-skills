@@ -50,6 +50,8 @@ Choose the narrowest matching skill:
 - `skills/doc-evidence-compare/` for repo-wide documentation versus code evidence gathering, mismatch checks, and coverage audits
 - `skills/doc-governance-init/` for bootstrapping or refactoring repository documentation into a layered governance structure
 - `skills/zx-script/` for zx-based CLI automation
+- `skills/auto-proxy-detect/` for network diagnostics, proxy detection, and execution path selection
+- `skills/admin-crud-style/` for consistent React + shadcn/ui CRUD admin page scaffolding and review
 
 ## Output Contract
 

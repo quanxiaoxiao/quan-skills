@@ -51,6 +51,7 @@ This audit verifies five areas:
 | `skills/zx-script/agents/openai.yaml` | Discovery metadata |
 | `skills/auto-proxy-detect/agents/openai.yaml` | Discovery metadata |
 | `skills/admin-crud-style/agents/openai.yaml` | Discovery metadata after remediation |
+| `skills/doc-governance-init/agents/openai.yaml` | Discovery metadata for governance skill |
 
 ### Governance Artifacts Expected By Plan
 

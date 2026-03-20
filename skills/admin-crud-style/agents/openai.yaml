@@ -1,0 +1,7 @@
+interface:
+  display_name: "Admin CRUD Style"
+  short_description: "Consistent React + shadcn/ui CRUD admin pages"
+  default_prompt: "Use $admin-crud-style to scaffold or review a CRUD admin page with consistent layout, filters, table, pagination, form dialogs, and interaction patterns using React + shadcn/ui + Tailwind."
+
+policy:
+  allow_implicit_invocation: true

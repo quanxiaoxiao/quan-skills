@@ -19,17 +19,24 @@ Allowed structures:
 
 Functional style here also means preferring function boundaries that are easy to unit test.
 
-## Forbidden
+## Forbidden Keywords
 
-Never generate:
+The following patterns must not appear in generated code:
 
 - `class`
 - `abstract class`
-- inheritance chains
-- constructor-based services
-- static utility classes
-- singleton classes
+- `extends` (inheritance)
+- `constructor(` / `private constructor` / `protected constructor` / `public constructor`
+- `static class`
 - `new Service()` patterns
+
+## Forbidden Architecture Patterns
+
+- service classes
+- controller classes
+- singleton classes
+- inheritance-based hierarchies
+- static utility classes
 
 ## Preferred Alternatives
 
@@ -167,12 +174,46 @@ Otherwise classes must not be used.
 
 ---
 
-## Output Verification
+## Rewrite Examples
 
-Before finalizing JavaScript or TypeScript output, verify:
+### Controller
 
-- no `class` keyword exists
-- no `abstract class` exists
+```javascript
+// Forbidden
+class UserController {
+  async create(ctx) {}
+}
+
+// Required rewrite
+export const createUserController = (deps) => {
+  const create = async (ctx) => {}
+  return { create }
+}
+```
+
+### Static Utility
+
+```javascript
+// Forbidden
+class HashUtil {
+  static sha256(data) {}
+}
+
+// Required rewrite
+export const sha256 = (data) => {}
+```
+
+## Enforcement
+
+Before finalizing JavaScript or TypeScript output:
+
+1. Scan for forbidden keywords and architecture patterns.
+2. If detected, rewrite the code using functions, factory functions, or closures.
+3. Ensure no `class` keyword remains.
+
+Verify:
+
+- no `class` or `abstract class` keyword exists
 - no inheritance pattern exists
 - no constructor-based services exist
 - business logic is split into small functions that can be unit tested directly

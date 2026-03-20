@@ -1,0 +1,7 @@
+interface:
+  display_name: "Doc Governance Init"
+  short_description: "Bootstrap layered documentation governance"
+  default_prompt: "Use $doc-governance-init to bootstrap or refactor a repository's documentation into a layered governance structure with AGENTS.md, CLAUDE.md, SKILL.md, and docs/ that supports humans and multiple coding agents."
+
+policy:
+  allow_implicit_invocation: true
