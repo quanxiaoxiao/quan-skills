@@ -170,8 +170,8 @@ If either file still exists, the naming and de-duplication phase is incomplete.
 
 ## Naming and De-Duplication Checks
 
-- [ ] No file still references `forbid-oop-patterns.rule.md`
-- [ ] No file still references `no-oop-js-ts.checklist.md`
+- [ ] No active governance or skill file still references `forbid-oop-patterns.rule.md`
+- [ ] No active governance or skill file still references `no-oop-js-ts.checklist.md`
 - [ ] All surviving references point to `functional-only-js-ts.rule.md`
 - [ ] All surviving checklist references point to `functional-only-js-ts.checklist.md`
 - [ ] No duplicate OOP prohibition text is maintained in two separate rule files
@@ -216,8 +216,15 @@ ls \
 test ! -f rules/forbid-oop-patterns.rule.md && echo "OK: old OOP rule removed"
 test ! -f checklists/no-oop-js-ts.checklist.md && echo "OK: old checklist removed"
 
-# Residual references must be gone
-! rg -n "forbid-oop-patterns\\.rule\\.md|no-oop-js-ts\\.checklist\\.md" .
+# Residual references must be gone from active paths
+! rg -n \
+  --glob 'AGENTS.md' \
+  --glob 'SKILL.md' \
+  --glob 'rules/**' \
+  --glob 'checklists/**' \
+  --glob 'prompts/**' \
+  --glob 'skills/**' \
+  "forbid-oop-patterns\\.rule\\.md|no-oop-js-ts\\.checklist\\.md" .
 
 # Check admin-crud-style basic structure
 rg -n "^---$|^## Use This Skill$|^## Pre-Read Order$|^## Workflow$|^## Verification$" skills/admin-crud-style/SKILL.md

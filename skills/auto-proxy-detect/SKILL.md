@@ -62,19 +62,21 @@ This skill is **not a full replacement** for:
 
 ## Pre-Read Order
 
-1. Identify whether the task includes a real network operation
-2. Identify the tool category:
-   - package manager
-   - docker
-   - curl/wget
-   - git
-   - Codex / OpenCode / API client
-3. Identify whether a concrete target URL / hostname / registry is known
-4. Decide whether lightweight probing should happen before the real command
+Read the task context first:
+
+1. the user command or the network-dependent operation being prepared
+2. any repository docs or scripts that already define proxy behavior for the target tool
+
+Then load bundled guidance from this skill:
+
+3. `references/diagnosis-stages.md`
+4. `references/proxy-patterns.md`
+5. `references/target-probe-patterns.md`
+6. `references/codex-opencode-notes.md` when the task involves Codex, OpenCode, or another API client
 
 ---
 
-## Diagnosis Workflow
+## Workflow
 
 ### Step 1: Detect local proxy listener
 
@@ -369,7 +371,7 @@ Preferred response shape:
 
 ---
 
-## Verification Checklist
+## Verification
 
 1. Verify local proxy listener detection
 2. Verify HTTP proxy behavior
