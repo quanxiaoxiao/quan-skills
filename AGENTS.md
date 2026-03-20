@@ -44,6 +44,10 @@ Full rule definitions live in `rules/`. Verification checklists live in `checkli
 - Do not add speculative documentation. Document what exists.
 - When adding a new skill, update the Active Skills table above.
 
+## Shared Resource Notes
+
+- When a task targets `scripts/`, follow `rules/scripts-global.rule.md` and verify with `checklists/scripts-global.checklist.md` before completing.
+
 ## Repository Structure
 
 ```

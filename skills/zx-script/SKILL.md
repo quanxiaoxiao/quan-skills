@@ -28,10 +28,14 @@ Do NOT use this skill when:
 
 Read these files before writing or editing:
 
-1. `package.json` - Check if zx is already a dependency
-2. Existing scripts in `scripts/` or `bin/` directories
-3. `README.md` - For usage context and conventions
-4. `.nvmrc` or `engines` field - For Node version constraints
+1. `../../rules/scripts-global.rule.md` - Base constraints for all scripts
+2. `../../checklists/scripts-global.checklist.md` - Verification checklist for all scripts
+3. `package.json` - Check if zx is already a dependency
+4. Existing scripts in `scripts/` or `bin/` directories
+5. `README.md` - For usage context and conventions
+6. `.nvmrc` or `engines` field - For Node version constraints
+
+This skill inherits all constraints from `scripts-global` and adds zx-specific guidance on top.
 
 ## Workflow
 

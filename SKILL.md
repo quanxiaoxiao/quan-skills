@@ -33,10 +33,12 @@ Coding principles and conventions are defined in [AGENTS.md](AGENTS.md). Apply t
 
 Use these bundled resources when a task needs them:
 
-- `rules/` for durable repo-wide standards (coding + Node.js + Hurl)
+- `rules/` for durable repo-wide standards (coding + Node.js + Hurl + scripts)
 - `checklists/` for verification checklists
 - `prompts/` for reusable maintenance prompts
 - `docs/workflows/` for Node.js audit, fix, and modernization workflows
+
+When a task targets `scripts/`, read `rules/scripts-global.rule.md` and `checklists/scripts-global.checklist.md` before choosing a sub-skill.
 
 ## Skill Routing
 
