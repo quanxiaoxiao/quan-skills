@@ -1,5 +1,7 @@
 # Node Project Audit Prompt
 
+> Authoritative prompt: `quan-skills:prompts/node-project-audit.md`
+
 Audit the current Node.js project according to the repository rules and checklist.
 
 Your task is to inspect the existing project and produce a structured audit report.

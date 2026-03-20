@@ -1,8 +1,9 @@
 # TS Backend Audit
 
-> Authoritative skill: `skills/ts-backend-standard/`
-> Related rule: `rules/backend-functional-architecture.rule.md`
-> Related checklist: `checklists/backend-architecture.checklist.md`
+> Authoritative prompt: `quan-skills:prompts/ts-backend-audit.md`
+> Authoritative skill: `quan-skills:skills/ts-backend-standard/SKILL.md`
+> Related rule: `quan-skills:rules/backend-functional-architecture.rule.md`
+> Related checklist: `quan-skills:checklists/backend-architecture.checklist.md`
 
 ## Task
 
@@ -11,7 +12,7 @@ Audit a TypeScript backend repository against the `ts-backend-standard` skill ba
 ## Steps
 
 1. Read `README.md`, `package.json`, `tsconfig*.json`, `eslint.config.*`, and `src/` layout.
-2. Load `skills/ts-backend-standard/SKILL.md` and relevant references.
+2. Load `quan-skills:skills/ts-backend-standard/SKILL.md` and relevant references.
 3. Check layer separation: routes → schemas → services → models.
 4. Check that services do not depend on Hono `Context` and routes do not access models directly.
 5. Check functional style: no `class`, factory functions for services, composition over inheritance.

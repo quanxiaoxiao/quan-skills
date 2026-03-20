@@ -1,11 +1,14 @@
 # Prompt: Improve Existing Skill
 
+> Authoritative prompt: `quan-skills:prompts/improve-skill.md`
+> Related doc: `quan-skills:docs/skill-authoring.md`
+
 Refine and improve an existing Codex skill.
 
 ## Authoritative Source
 
 Skill anatomy and quality expectations:
-[docs/skill-authoring.md](../docs/skill-authoring.md)
+`quan-skills:docs/skill-authoring.md`
 
 ## Context
 
@@ -15,7 +18,7 @@ Skill anatomy and quality expectations:
 ## Steps
 
 1. Read the current SKILL.md
-2. Read `docs/skill-authoring.md` for required anatomy
+2. Read `quan-skills:docs/skill-authoring.md` for required anatomy
 3. Identify problems: unclear triggers, missing workflow steps, vague instructions, missing verification
 4. Check if `references/` docs need updates
 5. Apply fixes:

@@ -44,9 +44,26 @@ Full rule definitions live in `rules/`. Verification checklists live in `checkli
 - Do not add speculative documentation. Document what exists.
 - When adding a new skill, update the Active Skills table above.
 
+## Cross-Project Reuse Protocol
+
+This repository uses the `quan-skills:` logical path protocol for cross-project references.
+
+**Resolution rule:**
+
+```
+quan-skills:<subpath>  →  ~/.codex/skills/quan-skills/<subpath>
+```
+
+- `quan-skills:` is a logical prefix, not a relative path
+- It always resolves to `QUAN_SKILLS_HOME` (default: `~/.codex/skills/quan-skills`)
+- **Project context** uses target project local paths
+- **Methodology context** uses `quan-skills:` logical paths
+
+When referencing resources in prompts, skills, rules, or checklists, use this protocol as the primary reference mechanism. Markdown relative links may be kept as convenience shortcuts for in-repo browsing but are not the authoritative reference.
+
 ## Shared Resource Notes
 
-- When a task targets `scripts/`, follow `rules/scripts-global.rule.md` and verify with `checklists/scripts-global.checklist.md` before completing.
+- When a task targets `scripts/`, follow `quan-skills:rules/scripts-global.rule.md` and verify with `quan-skills:checklists/scripts-global.checklist.md` before completing.
 
 ## Repository Structure
 
@@ -58,6 +75,7 @@ quan-skills/
 ├── SKILL.md               # Codex entry point and skill routing
 ├── docs/                  # System knowledge (authoring guides, workflows)
 │   ├── skill-authoring.md
+│   ├── cross-project-usage.md
 │   └── workflows/
 ├── rules/                 # Durable coding and Node.js rules
 ├── checklists/            # Verification checklists

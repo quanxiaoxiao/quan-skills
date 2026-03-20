@@ -1,5 +1,9 @@
 # Prompt: Create or Review Script
 
+> Authoritative prompt: `quan-skills:prompts/create-or-review-script.md`
+> Related rule: `quan-skills:rules/scripts-global.rule.md`
+> Related checklist: `quan-skills:checklists/scripts-global.checklist.md`
+
 Create a new script or review an existing script under `scripts/`.
 
 ---
@@ -17,8 +21,8 @@ Create a new script or review an existing script under `scripts/`.
 
 Before starting, read:
 
-1. `rules/scripts-global.rule.md` — authoritative constraints for all script work
-2. `checklists/scripts-global.checklist.md` — verification checklist
+1. `quan-skills:rules/scripts-global.rule.md` — authoritative constraints for all script work
+2. `quan-skills:checklists/scripts-global.checklist.md` — verification checklist
 
 ---
 

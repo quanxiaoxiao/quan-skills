@@ -1,11 +1,14 @@
 # Prompt: Doc Coverage Audit
 
+> Authoritative prompt: `quan-skills:prompts/doc-coverage-audit.md`
+> Authoritative skill: `quan-skills:skills/doc-evidence-compare/SKILL.md`
+
 Apply the `doc-evidence-compare` skill in audit mode to check documentation coverage for a topic.
 
 ## Authoritative Source
 
 Full workflow, search order, and output format defined in:
-[skills/doc-evidence-compare/SKILL.md](../skills/doc-evidence-compare/SKILL.md)
+`quan-skills:skills/doc-evidence-compare/SKILL.md`
 
 ## Context
 

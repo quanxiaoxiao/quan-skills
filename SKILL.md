@@ -33,25 +33,25 @@ Coding principles and conventions are defined in [AGENTS.md](AGENTS.md). Apply t
 
 Use these bundled resources when a task needs them:
 
-- `rules/` for durable repo-wide standards (coding + Node.js + Hurl + scripts)
-- `checklists/` for verification checklists
-- `prompts/` for reusable maintenance prompts
-- `docs/workflows/` for Node.js audit, fix, and modernization workflows
+- `quan-skills:rules/` for durable repo-wide standards (coding + Node.js + Hurl + scripts)
+- `quan-skills:checklists/` for verification checklists
+- `quan-skills:prompts/` for reusable maintenance prompts
+- `quan-skills:docs/workflows/` for Node.js audit, fix, and modernization workflows
 
-When a task targets `scripts/`, read `rules/scripts-global.rule.md` and `checklists/scripts-global.checklist.md` before choosing a sub-skill.
+When a task targets `scripts/`, read `quan-skills:rules/scripts-global.rule.md` and `quan-skills:checklists/scripts-global.checklist.md` before choosing a sub-skill.
 
 ## Skill Routing
 
 Choose the narrowest matching skill:
 
-- `skills/ts-backend-standard/` for Hono, Zod, TypeScript, and ESLint backend structure
-- `skills/behavior-safe-code-repair/` for lint, typecheck, or build repair with risk-aware test decisions
-- `skills/hurl-testing/` for Hurl contract generation, repair, and regression coverage
-- `skills/doc-evidence-compare/` for repo-wide documentation versus code evidence gathering, mismatch checks, and coverage audits
-- `skills/doc-governance-init/` for bootstrapping or refactoring repository documentation into a layered governance structure
-- `skills/zx-script/` for zx-based CLI automation
-- `skills/auto-proxy-detect/` for network diagnostics, proxy detection, and execution path selection
-- `skills/admin-crud-style/` for consistent React + shadcn/ui CRUD admin page scaffolding and review
+- `quan-skills:skills/ts-backend-standard/` for Hono, Zod, TypeScript, and ESLint backend structure
+- `quan-skills:skills/behavior-safe-code-repair/` for lint, typecheck, or build repair with risk-aware test decisions
+- `quan-skills:skills/hurl-testing/` for Hurl contract generation, repair, and regression coverage
+- `quan-skills:skills/doc-evidence-compare/` for repo-wide documentation versus code evidence gathering, mismatch checks, and coverage audits
+- `quan-skills:skills/doc-governance-init/` for bootstrapping or refactoring repository documentation into a layered governance structure
+- `quan-skills:skills/zx-script/` for zx-based CLI automation
+- `quan-skills:skills/auto-proxy-detect/` for network diagnostics, proxy detection, and execution path selection
+- `quan-skills:skills/admin-crud-style/` for consistent React + shadcn/ui CRUD admin page scaffolding and review
 
 ## Output Contract
 

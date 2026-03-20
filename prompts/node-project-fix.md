@@ -1,3 +1,7 @@
+# Node Project Fix
+
+> Authoritative prompt: `quan-skills:prompts/node-project-fix.md`
+
 Fix this Node.js repository according to quan-skills standards.
 
 Requirements:

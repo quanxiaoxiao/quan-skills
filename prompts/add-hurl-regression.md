@@ -1,5 +1,8 @@
 # Prompt: Add Hurl Regression Test
 
+> Authoritative prompt: `quan-skills:prompts/add-hurl-regression.md`
+> Authoritative skill: `quan-skills:skills/hurl-testing/SKILL.md`
+
 Add regression coverage for fixed bugs following the Hurl Testing Framework rules.
 
 ## Context

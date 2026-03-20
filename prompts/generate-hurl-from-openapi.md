@@ -1,5 +1,8 @@
 # Prompt: Generate Hurl Tests from OpenAPI
 
+> Authoritative prompt: `quan-skills:prompts/generate-hurl-from-openapi.md`
+> Authoritative skill: `quan-skills:skills/hurl-testing/SKILL.md`
+
 Generate maintainable Hurl tests from OpenAPI specification following the Hurl Testing Framework rules.
 
 ## Context

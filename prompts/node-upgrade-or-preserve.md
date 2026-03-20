@@ -1,5 +1,7 @@
 # Node Upgrade or Preserve Prompt
 
+> Authoritative prompt: `quan-skills:prompts/node-upgrade-or-preserve.md`
+
 When working on an existing Node.js project, decide whether the project should preserve its current standards or whether an upgrade is justified.
 
 ---

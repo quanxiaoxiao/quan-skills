@@ -1,7 +1,8 @@
 # Auto Proxy Detect
 
-> Authoritative skill: `skills/auto-proxy-detect/`
-> Related checklist: `checklists/auto-proxy-detect.checklist.md`
+> Authoritative prompt: `quan-skills:prompts/auto-proxy-detect.md`
+> Authoritative skill: `quan-skills:skills/auto-proxy-detect/SKILL.md`
+> Related checklist: `quan-skills:checklists/auto-proxy-detect.checklist.md`
 
 ## Task
 

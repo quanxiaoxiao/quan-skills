@@ -1,11 +1,14 @@
 # Prompt: Doc Code Evidence Compare
 
+> Authoritative prompt: `quan-skills:prompts/doc-code-evidence-compare.md`
+> Authoritative skill: `quan-skills:skills/doc-evidence-compare/SKILL.md`
+
 Apply the `doc-evidence-compare` skill to compare repository documentation and code for one concrete topic.
 
 ## Authoritative Source
 
 Full workflow, search order, and output format defined in:
-[skills/doc-evidence-compare/SKILL.md](../skills/doc-evidence-compare/SKILL.md)
+`quan-skills:skills/doc-evidence-compare/SKILL.md`
 
 ## Context
 

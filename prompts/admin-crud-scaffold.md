@@ -1,7 +1,8 @@
 # Admin CRUD Scaffold
 
-> Authoritative skill: `skills/admin-crud-style/`
-> Related checklist: `checklists/admin-crud-style.checklist.md`
+> Authoritative prompt: `quan-skills:prompts/admin-crud-scaffold.md`
+> Authoritative skill: `quan-skills:skills/admin-crud-style/SKILL.md`
+> Related checklist: `quan-skills:checklists/admin-crud-style.checklist.md`
 
 ## Task
 

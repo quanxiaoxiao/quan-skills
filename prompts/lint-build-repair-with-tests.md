@@ -1,5 +1,8 @@
 # Prompt: lint-build-repair-with-tests
 
+> Authoritative prompt: `quan-skills:prompts/lint-build-repair-with-tests.md`
+> Authoritative skill: `quan-skills:skills/behavior-safe-code-repair/SKILL.md`
+
 You are repairing a codebase that currently fails in one or more of these areas:
 
 - ESLint

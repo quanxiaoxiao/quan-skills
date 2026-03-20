@@ -1,5 +1,7 @@
 # Node New Project Baseline Prompt
 
+> Authoritative prompt: `quan-skills:prompts/node-new-project-baseline.md`
+
 Create or adjust a Node.js project to follow the repository's default new-project standard.
 
 ---

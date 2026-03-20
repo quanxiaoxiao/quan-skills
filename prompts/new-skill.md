@@ -1,11 +1,14 @@
 # Prompt: Create New Skill
 
+> Authoritative prompt: `quan-skills:prompts/new-skill.md`
+> Related doc: `quan-skills:docs/skill-authoring.md`
+
 Create a new Codex skill for the quan-skills repository.
 
 ## Authoritative Source
 
 Full authoring guide, template, naming conventions, and maintenance workflow:
-[docs/skill-authoring.md](../docs/skill-authoring.md)
+`quan-skills:docs/skill-authoring.md`
 
 ## Context
 
@@ -15,7 +18,7 @@ Full authoring guide, template, naming conventions, and maintenance workflow:
 
 ## Steps
 
-1. Read `docs/skill-authoring.md` for the template and conventions
+1. Read `quan-skills:docs/skill-authoring.md` for the template and conventions
 2. Create directory: `skills/{skill_name}/`
 3. Create `SKILL.md` using the template (frontmatter + required sections)
 4. Add `references/` folder if supporting docs are needed

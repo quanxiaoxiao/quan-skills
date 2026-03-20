@@ -1,5 +1,8 @@
 # Prompt: Fix Failing Hurl Test
 
+> Authoritative prompt: `quan-skills:prompts/fix-failing-hurl.md`
+> Authoritative skill: `quan-skills:skills/hurl-testing/SKILL.md`
+
 Repair failing Hurl tests systematically without weakening contract assertions.
 
 ## Context
